@@ -1,0 +1,40 @@
+{
+  "name": "ng-ink",
+  "version": "0.1.0",
+  "description": "InK web components for AngularJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/caitp/ng-ink.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "Ink",
+    "Front-end",
+    "UI",
+    "UX",
+    "Framework",
+    "Design",
+    "Web Components",
+    "Sapo"
+  ],
+  "author": "Caitlin Potter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caitp/ng-ink/issues"
+  },
+  "homepage": "https://github.com/caitp/ng-ink",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.7.2",
+    "bower": "~1.2.7",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-parallel": "~0.3.1",
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}
