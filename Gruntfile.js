@@ -80,6 +80,16 @@ module.exports = function(grunt) {
     },
 
 
+    "ghPages": {
+      options: {
+        base: "build",
+        branch: "gh-pages",
+        repo: "https://github.com/caitp/ng-ink.git"
+      },
+      src: ["**/*"]
+    },
+
+
     parallel: {
       server: {
         tasks: [{
@@ -135,10 +145,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-parallel');
   grunt.loadTasks('lib/grunt');
 
-  grunt.registerTask('server', 'Run development server', ['build', 'bower_copy', 'concat', 'parallel:server']);
+  grunt.renameTask('gh-pages', 'ghPages');
+  grunt.registerTask('example', 'Build example files', ['build', 'bower_copy', 'concat']);
+  grunt.registerTask('gh-pages', 'Push gh-pages site', ['example', 'ghPages']);
+  grunt.registerTask('server', 'Run development server', ['example', 'parallel:server']);
 };
