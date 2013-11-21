@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="ink.example">
+  <head>
+    <title>ng-ink{{ title ? ' ' + title : '' }}</title>
+    <link rel="stylesheet" type="text/css" href="css/docs.css" />
+  </head>
+  <body ui-view>
+    <div ></div>
+    <script src="js/ink-all.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/underscore.string.js"></script>
+    <script src="ng-ink.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=false&lang=ml"></script>
+    <script>
+    if (/MSIE\s+7\.0;/.test(navigator.userAgent)) {
+      addcss("css/ink-ie7.css");
+    } else {
+      addcss("css/ink.css");
+    }
+    function addcss(path) {
+      var link = document.createElement("link");
+      link.setAttribute("rel", "stylesheet");
+      link.setAttribute("type", "text/css");
+      link.setAttribute("href", path);
+      document.head.appendChild(link);
+    }
+    </script>
+  </body>
+</html>
